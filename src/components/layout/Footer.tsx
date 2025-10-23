@@ -40,7 +40,7 @@ export default function Footer() {
             <h3 className="text-lg font-medium text-white mb-4">Connect</h3>
             <div className="flex justify-center md:justify-start gap-4">
               <a
-                href="https://github.com/Srijan-Shukla"
+                href="https://github.com/Srijan-XI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors text-xl"

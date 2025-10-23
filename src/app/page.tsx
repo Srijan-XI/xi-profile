@@ -258,7 +258,7 @@ export default function Home() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com/Srijan-Shukla"
+                href="https://github.com/Srijan-XI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-grad"
