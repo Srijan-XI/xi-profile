@@ -39,12 +39,14 @@ export default function Home() {
                   sequence={[
                     'Cybersecurity Sentinel 🛡️',
                     2000,
-                    'Full-Stack Developer 💻',
+                    'Writer ✍️',
                     2000,
-                    'AI/ML Enthusiast 🤖',
+                    'AI Enthusiast 🤖',
                     2000,
                     'Penetration Tester 🔐',
                     2000,
+                    'STEM Innovator 🚀',
+                    2000
                   ]}
                   wrapper="span"
                   speed={50}
