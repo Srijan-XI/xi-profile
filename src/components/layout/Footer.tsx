@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Footer Brand */}
           <div>
             <h1 className="text-2xl font-semibold text-white mb-2">Srijan-XI</h1>
-            <span className="text-sm text-gray-300">Cybersecurity & Full-Stack Developer</span>
+            <span className="text-sm text-gray-300">Cybersecurity Enthusiast</span>
           </div>
 
           {/* Footer Links */}
@@ -71,7 +71,8 @@ export default function Footer() {
       {/* Copyright */}
       <div className="py-6 border-t border-gray-700">
         <p className="text-center text-sm text-gray-300">
-          © Srijan-XI. All rights reserved | Made with <i className="uil uil-heart text-red-500"></i> and <i className="fab fa-react text-blue-400"></i>
+          © Srijan-XI. <br />
+          All rights reserved 
         </p>
       </div>
     </footer>

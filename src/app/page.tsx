@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import ContactForm from '@/components/ui/ContactForm';
 import Image from 'next/image';
 import { useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
@@ -229,45 +230,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact CTA */}
+      {/* Contact Section */}
       <section className="section bg-[var(--body-color)]" id="contact">
-        <div className="container mx-auto">
-          <div className="max-w-2xl mx-auto text-center" data-aos="zoom-in">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12" data-aos="zoom-in">
             <h2 className="section__title">Contact Me</h2>
             <span className="section__subtitle">Get in touch</span>
-
-            <p className="text-[var(--text-color)] mb-8 mt-8">
-              Have a project in mind or want to discuss cybersecurity solutions? Let's connect!
-            </p>
-
-            <div className="flex justify-center gap-6 flex-wrap">
-              <a
-                href="mailto:srijan@example.com"
-                className="btn-grad"
-              >
-                <i className="uil uil-envelope-alt mr-2"></i>
-                Send Email
-              </a>
-              <a
-                href="https://www.linkedin.com/in/srijan-xi/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-grad"
-              >
-                <i className="uil uil-linkedin-alt mr-2"></i>
-                LinkedIn
-              </a>
-              <a
-                href="https://github.com/Srijan-XI"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-grad"
-              >
-                <i className="uil uil-github-alt mr-2"></i>
-                GitHub
-              </a>
-            </div>
           </div>
+
+          <ContactForm />
         </div>
       </section>
     </PageTransition>
