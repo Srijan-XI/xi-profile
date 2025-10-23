@@ -1,0 +1,149 @@
+/*============================================
+    BLOG LINK SECTION STYLES
+    (Used on main portfolio page)
+==============================================*/
+
+/* Main blog section with gradient background */
+.blog-link {
+  /* Primary background color fallback */
+  background: var(--first-color-second);
+  /* Beautiful diagonal gradient overlay */
+  background: linear-gradient(
+    135deg, /* 135 degree angle for diagonal effect */
+    var(--first-color-second), /* Start color */
+    var(--first-color-alt) /* End color for smooth transition */
+  );
+}
+
+/* Container for blog section content */
+.blog-link__container {
+  padding: 0.5rem 0; /* Generous vertical padding for breathing room */
+}
+
+/* Content wrapper with centered layout */
+.blog-link__content {
+  text-align: center; /* Center all text content */
+  max-width: 600px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the content block */
+}
+
+/* Large screens (> 600px) */
+.blog-link__content {
+  width: 600px; /* Fixed width, centered */
+}
+
+/* Small screens (< 600px) */
+.blog-link__content {
+  width: 100%; /* Full width, still centered */
+}
+
+/* Description text styling */
+.blog-link__description {
+  color: var(--text-color-light); /* Light text color for contrast */
+  margin-bottom: 2rem; /* Space below description */
+  line-height: 1.6; /* Comfortable reading line height */
+}
+
+/* Blog button styling */
+.blog-link__button {
+  display: inline-flex; /* Flex for icon alignment */
+  align-items: center; /* Center content vertically */
+  gap: 0.5rem; /* Space between text and icon */
+  background: var(--container-color); /* Light background */
+  color: var(--first-color); /* Primary color text */
+  padding: 1rem 2rem; /* Comfortable button padding */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-weight: var(--font-medium); /* Medium font weight */
+  transition: 0.3s; /* Smooth hover transitions */
+}
+
+/* Blog button hover effects */
+.blog-link__button:hover {
+  background: var(--first-color); /* Invert colors on hover */
+  color: var(--container-color); /* White text on colored background */
+  transform: translateY(-0.25rem); /* Slight lift effect */
+}
+
+/* Section titles and subtitles in blog section */
+.blog-link .section__title,
+.blog-link .section__subtitle {
+  color: var(--container-color); /* White text on gradient background */
+}
+
+/*============================================
+    DEV WIDGET PAGE STYLES
+    (Used on dedicated dev-widget.html page)
+==============================================*/
+
+/* Main page container - full screen layout */
+.dev-widget-page {
+  min-height: 100vh; /* Full viewport height */
+  display: flex; /* Flexbox for centering */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 2rem; /* Padding for mobile spacing */
+  background: var(--body-color); /* Use theme background color */
+  background-image: url('../img/Dull.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Widget container with centered layout */
+.dev-widget {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center all text content */
+  margin: auto; /* Center the container */
+  max-width: 800px; /* Limit width for better readability */
+  width: 100%; /* Full width up to max-width */
+}
+
+/*============================================
+    NAVIGATION ELEMENTS
+==============================================*/
+
+/* Back to portfolio button - fixed position */
+.back-to-portfolio {
+  position: fixed; /* Fixed positioning for always visible */
+  top: 2rem; /* Distance from top of viewport */
+  left: 2rem; /* Distance from left of viewport */
+  z-index: 1000; /* High z-index to stay above other content */
+  display: flex; /* Flex for icon alignment */
+  align-items: center; /* Center content vertically */
+  gap: 0.5rem; /* Space between icon and text */
+  padding: 0.75rem 1.5rem; /* Comfortable button padding */
+  background: var(--first-color); /* Primary color background */
+  color: var(--container-color); /* White text */
+  text-decoration: none; /* Remove underline */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-weight: var(--font-medium); /* Medium font weight */
+  transition: 0.3s; /* Smooth hover transition */
+}
+
+/* Back button hover effects */
+.back-to-portfolio:hover {
+  background: var(--first-color-alt); /* Darker shade on hover */
+  transform: translateY(-0.25rem); /* Slight lift effect */
+}
+
+/*============================================
+    PAGE TYPOGRAPHY
+==============================================*/
+
+/* Main page title styling */
+.page-title {
+  font-size: var(--h1-font-size); /* Large heading size */
+  color: var(--title-color); /* Theme title color */
+  margin-bottom: 1rem; /* Space below title */
+}
+
+/* Page subtitle/description styling */
+.page-subtitle {
+  font-size: var(--normal-font-size); /* Standard text size */
+  color: var(--text-color); /* Theme text color */
+  margin-bottom: 3rem; /* Large space below for widget separation */
+}

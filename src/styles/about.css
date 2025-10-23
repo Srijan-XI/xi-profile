@@ -1,0 +1,43 @@
+/* About Page Styles */
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: var(--body-color);
+  background-image: url('../img/Dull.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.back-to-portfolio {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--first-color);
+  color: var(--container-color);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+}
+
+.back-to-portfolio:hover {
+  background: var(--first-color-alt);
+  transform: translateY(-0.25rem);
+}
+
+/* About Section Styles */
+.about {
+  max-width: 1200px;
+  width: 100%;
+}

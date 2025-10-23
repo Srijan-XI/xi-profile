@@ -1,0 +1,197 @@
+/* Projects Page Styles */
+.projects-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: var(--body-color);
+  background-image: url('../img/Dull.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.back-to-portfolio {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--first-color);
+  color: var(--container-color);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+}
+
+.back-to-portfolio:hover {
+  background: var(--first-color-alt);
+  transform: translateY(-0.25rem);
+}
+
+/* Projects Section Styles */
+.portfolio {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Grid layout for portfolio container (cards) */
+.portfolio__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+  padding: 0.5rem 0 2rem 0;
+}
+
+@media (min-width: 880px) {
+  .portfolio__container {
+    /* Keep one card per row for larger image area */
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 1.5rem;
+  }
+  .portfolio__content {
+    /* Make the image column wider */
+    grid-template-columns: 520px 1fr;
+    align-items: stretch;
+  }
+  .portfolio__img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    max-height: none;
+    border-radius: 0.9rem;
+    object-fit: cover;
+  }
+}
+
+/* Legacy Swiper styles removed; using CSS grid for layout */
+
+/* Card layout for each portfolio item (image left, content right) */
+.portfolio__content {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 1.25rem;
+  align-items: start;
+  background: rgba(255,255,255,0.03);
+  padding: 1.25rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  margin: 1.25rem 0;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  min-height: 220px;
+}
+
+.portfolio__img {
+  width: 100%;
+  max-width: 820px;
+  height: auto;
+  max-height: 620px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.9rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  display: block;
+  justify-self: start;
+}
+
+.portfolio__data {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding: 1.25rem 1.25rem 1rem 1.25rem;
+  border-radius: 0.9rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Buttons row */
+.portfolio__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+  justify-content: flex-start;
+}
+
+.portfolio__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.portfolio__description {
+  color: var(--text-color, #ddd);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-height: 8.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Make the repo / live anchors look like pill buttons under the content */
+.portfolio__data .portfolio__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.7rem;
+  /* Remove global .button margins and rely on container gap */
+  margin: 0;
+  background: var(--container-color, #fff);
+  color: var(--first-color, #0a84ff);
+  box-shadow: 0 6px 14px rgba(10, 10, 10, 0.12);
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  align-self: flex-start;
+  width: fit-content;
+}
+
+.portfolio__data .portfolio__button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.22);
+}
+
+/* Gap is handled by .portfolio__buttons */
+.portfolio__data .portfolio__button + .portfolio__button { margin: 0; }
+
+.portfolio__content:hover {
+  transform: translateY(-6px);
+}
+
+/* AOS (Animate On Scroll) tweaks */
+[data-aos] {
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .portfolio__content {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio__img {
+    max-height: 340px;
+    max-width: 100%;
+    aspect-ratio: auto;
+  }
+
+  .portfolio__data {
+    padding-top: 0.75rem;
+  }
+}

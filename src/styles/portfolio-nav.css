@@ -1,0 +1,121 @@
+/*============================================
+    PORTFOLIO NAVIGATION CARDS STYLES
+==============================================*/
+
+/* Main container for navigation cards grid layout */
+.portfolio-nav__container {
+  display: grid;
+  /* Responsive grid: minimum 300px wide cards, auto-fit to available space */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 2.5rem; /* Space between cards */
+  padding: 2rem 0; /* Vertical padding for breathing room */
+  align-items: stretch; /* All cards have equal height */
+  justify-content: center; /* Center the grid on the page */
+  max-width: 1200px; /* Prevent cards from spreading too wide on large screens */
+  margin: 0 auto; /* Center the entire container */
+}
+
+/* Individual navigation card styling */
+.portfolio-nav__card {
+  background: var(--container-color); /* Use theme background color */
+  border-radius: 1.25rem; /* Smooth rounded corners */
+  padding: 3rem 2rem 2.5rem; /* Extra space at top for better visual balance */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Distribute content evenly */
+  text-align: center; /* Center all text content */
+  /* Subtle shadow for depth */
+  box-shadow: 0 6px 25px rgba(14, 36, 49, 0.1);
+  /* Light border using theme color */
+  border: 1px solid rgba(var(--first-color-rgb, 0, 123, 255), 0.1);
+  /* Smooth animations for hover effects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect - lift up with enhanced shadow */
+.portfolio-nav__card:hover {
+  transform: translateY(-0.5rem); /* Lift card up on hover */
+  box-shadow: 0 10px 35px rgba(14, 36, 49, 0.15); /* Enhanced shadow */
+}
+
+/* Icon styling for each navigation card */
+.portfolio-nav__icon {
+  font-size: 3.5rem; /* Large, prominent icon size */
+  color: var(--first-color); /* Use theme primary color */
+  margin-bottom: 1.5rem; /* Space below icon */
+}
+
+/* Card title styling */
+.portfolio-nav__title {
+  font-size: var(--h3-font-size); /* Consistent heading size */
+  color: var(--title-color); /* Use theme title color */
+  font-weight: var(--font-semi-bold); /* Semi-bold for emphasis */
+  margin-bottom: 1rem; /* Space below title */
+}
+
+/* Card description text styling */
+.portfolio-nav__description {
+  color: var(--text-color); /* Use theme text color */
+  line-height: 1.6; /* Comfortable reading line height */
+  margin-bottom: 2rem; /* Space below description */
+  font-size: var(--normal-font-size); /* Standard text size */
+  flex-grow: 1; /* Pushes button to bottom for consistent card heights */
+}
+
+/*============================================
+    NAVIGATION CARD BUTTONS
+==============================================*/
+
+/* Main button styling with gradient background */
+.portfolio-nav__card .button {
+  /* Beautiful blue to purple gradient background */
+  background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
+  background-size: 200% auto; /* Double size for smooth animation */
+  color: white; /* White text for contrast */
+  padding: 15px 35px; /* Comfortable button padding */
+  border-radius: 10px; /* Rounded corners */
+  font-weight: var(--font-medium); /* Medium font weight */
+  text-transform: uppercase; /* Uppercase text for emphasis */
+  /* Smooth transitions for background and transform effects */
+  transition: 0.5s, transform 0.3s ease;
+  box-shadow: 0 0 20px #eee; /* Subtle glow effect */
+  display: inline-flex; /* Flex for icon alignment */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  gap: 0.5rem; /* Space between text and icon */
+  margin: 0 auto; /* Center button within card */
+  text-align: center; /* Center text alignment */
+}
+
+/* Button hover effects */
+.portfolio-nav__card .button:hover {
+  /* Move gradient to create sliding animation effect */
+  background-position: right center;
+  color: #fff; /* Maintain white text */
+  text-decoration: none; /* Remove any underlines */
+  transform: translateY(-0.25rem); /* Slight lift on hover */
+}
+
+/* Button icon styling */
+.portfolio-nav__card .button__icon {
+  font-size: 1rem; /* Icon size */
+  transition: transform 0.3s ease; /* Smooth icon animation */
+}
+
+/* Icon animation on button hover */
+.portfolio-nav__card .button:hover .button__icon {
+  transform: translateX(0.25rem); /* Slide icon to the right */
+}
+
+/*============================================
+    RESPONSIVE DESIGN
+==============================================*/
+
+/* Desktop and larger tablet screens (968px and up) */
+@media screen and (min-width: 968px) {
+  .portfolio-nav__container {
+    /* Fixed 4-column layout for larger screens */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem; /* Increased gap for better spacing on large screens */
+  }
+}
