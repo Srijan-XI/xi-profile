@@ -20,16 +20,27 @@ A modern, high-performance portfolio website showcasing cybersecurity expertise,
 - 💼 **Project Showcase** with live demos
 
 ### ✨ NEW: Enhanced UI/UX Features
-- � **Breadcrumb Navigation** - Dynamic page path navigation
+- 📍 **Breadcrumb Navigation** - Dynamic page path navigation
 - ⬆️ **Enhanced Back to Top** - Smooth scroll with gradient styling
 - 📊 **Reading Progress Bar** - Scroll progress indicator
 - 🖨️ **Print-Friendly Resume** - Optimized print layout
 - 🌍 **Multi-language Support** - 4 languages (EN, ES, FR, DE)
 - 🔄 **Smooth Page Transitions** - Fade/slide animations
 - 🎢 **Parallax Scrolling** - Depth effects on scroll
-- 🎯 **Custom Cursor** - Interactive gradient cursor (desktop)
 - ⏳ **Loading Animations** - Beautiful loading states
 - ⌨️ **Typing Animation** - Dynamic hero subtitle
+
+### 🔒 Security Features (NEW!)
+- 🛡️ **SQL Injection Protection** - Pattern detection and input sanitization
+- 🚫 **XSS Prevention** - HTML escaping and Content Security Policy
+- 🔐 **CSRF Protection** - SameSite cookies and secure headers
+- 🚦 **Rate Limiting** - Prevents brute force attacks (5 req/15min)
+- 🎯 **Attack Detection** - Real-time pattern recognition
+- 📋 **Input Validation** - Email, URL, and data sanitization
+- 🔒 **Security Headers** - HSTS, CSP, X-Frame-Options, and more
+- 🛑 **Clickjacking Protection** - Frame-ancestors prevention
+- 🔍 **MIME Sniffing Prevention** - Content-Type protection
+- 🌐 **Secure Middleware** - Automatic header application
 
 ## �🛠️ Tech Stack
 
@@ -42,6 +53,13 @@ A modern, high-performance portfolio website showcasing cybersecurity expertise,
 - **AOS 2.3.4** - Animate On Scroll library
 - **react-type-animation** - Typing effect animations
 - **next-intl** - Internationalization (i18n)
+
+### Security
+- **DOMPurify** - HTML sanitization
+- **Validator** - Input validation library
+- Custom security middleware
+- Attack pattern detection
+- Rate limiting system
 
 ### Icons
 - **Unicons 4.0.8** - Primary icon library (line icons)
@@ -96,32 +114,44 @@ xi-profile/
 │   │   │   └── page.tsx
 │   │   └── blog/               # Blog integration (Dev.to)
 │   │       └── page.tsx
-│   ├── components/             # Reusable components
-│   │   ├── Header.tsx          # Navigation + Dark mode + Language switcher
-│   │   ├── Footer.tsx          # Footer with gradient background
-│   │   ├── Breadcrumb.tsx      # 🆕 Breadcrumb navigation
-│   │   ├── ReadingProgress.tsx # 🆕 Scroll progress bar
-│   │   ├── BackToTop.tsx       # 🆕 Enhanced back-to-top button
-│   │   ├── PrintButton.tsx     # 🆕 Print resume button
-│   │   ├── CustomCursor.tsx    # 🆕 Interactive custom cursor
-│   │   ├── LanguageSwitcher.tsx # 🆕 Language selection dropdown
-│   │   ├── PageTransition.tsx  # 🆕 Page transition wrapper
-│   │   ├── Parallax.tsx        # 🆕 Parallax scroll wrapper
-│   │   └── LoadingSpinner.tsx  # 🆕 Loading animation
-│   └── styles/                 # Legacy CSS files (migrated)
+│   ├── components/             # Reusable components (organized)
+│   │   ├── layout/             # Layout components
+│   │   │   ├── Header.tsx      # Navigation + Language switcher
+│   │   │   └── Footer.tsx      # Footer with gradient
+│   │   ├── navigation/         # Navigation UI
+│   │   │   ├── Breadcrumb.tsx  # Page path navigation
+│   │   │   └── BackToTop.tsx   # Enhanced scroll button
+│   │   ├── ui/                 # UI components
+│   │   │   ├── ReadingProgress.tsx  # Scroll progress bar
+│   │   │   ├── PrintButton.tsx      # Print resume
+│   │   │   ├── LanguageSwitcher.tsx # Language selector
+│   │   │   └── LoadingSpinner.tsx   # Loading animation
+│   │   ├── animations/         # Animation wrappers
+│   │   │   ├── PageTransition.tsx   # Page transitions
+│   │   │   └── Parallax.tsx         # Parallax effects
+│   │   └── index.ts            # Barrel exports
+│   ├── lib/                    # Utilities
+│   │   └── security.ts         # 🔒 Security utilities
+│   ├── middleware.ts           # 🔒 Security middleware
+│   └── app/api/                # API routes
+│       └── contact/            # 🔒 Secure contact endpoint
+│           └── route.ts
 ├── public/                     # Static assets
-│   ├── images/                 # Project images, profile pics
-│   ├── favicon/                # Favicon files
-│   ├── MyCV.pdf                # Downloadable resume
-│   └── js/                     # Legacy JavaScript files
-├── ENHANCEMENTS.md             # 🆕 Detailed enhancement documentation
-├── QUICK_REFERENCE.md          # 🆕 Quick reference guide
+│   └── assets/                 # Organized assets
+│       ├── images/             # Images
+│       └── documents/          # PDFs, docs
+├── docs/                       # Documentation
+│   ├── ENHANCEMENTS.md         # UI/UX documentation
+│   ├── QUICK_REFERENCE.md      # Quick reference
+│   ├── PROJECT_STRUCTURE.md    # Structure guide
+│   └── SECURITY_QUICK_REF.md   # 🔒 Security quick ref
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.config.ts
 ├── next.config.ts
 ├── vercel.json                 # Deployment configuration
 └── README.md
+└── SECURITY.md             # 🔒 Security guide
 ```
 
 ## 📝 Scripts
@@ -380,4 +410,4 @@ MIT License - feel free to use this as a template for your own portfolio.
 ---
 
 **Built with ❤️ using Next.js, React, TypeScript, and Tailwind CSS**
-# xi-profile
+# Srijanxi Technologies
